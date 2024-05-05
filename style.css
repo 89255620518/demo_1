@@ -1,7 +1,49 @@
+@keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.head_cmd:hover {
+    cursor: pointer;
+    color: orange;
 }
 
 .almendra-regular {
@@ -61,6 +103,7 @@
     z-index: 2;
     width: 79%;
     gap: 4%;
+    margin: 80px 0 0 0;
 }
 
 .head_2 {
@@ -158,7 +201,7 @@
 
 .feedback_form {
     width: 30%;
-    height: 100%;
+    height: auto;
     position: relative;
     z-index: 2;
 }
@@ -167,7 +210,7 @@
     width: 100%;
     position: relative;
     z-index: 2;
-    height: 28%;
+    height: 150px;
     background: linear-gradient(180deg, #6A32B4 0%, #552693 100%);
     display: flex;
     align-items: center;
@@ -235,7 +278,7 @@
     line-height: 19px;
     text-align: center;
     width: 80%;
-    height: 18%;
+    height: 60px;
     background: rgba(255, 165, 0, 1);
     color: #ffffff;
     border-radius: 20px;
@@ -246,6 +289,9 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+    width: auto;
+    font-size: 16px;
+    text-align: center;
 }
 
 #top__content {
@@ -416,10 +462,11 @@
 }
 
 .my_icon {
+    cursor: pointer;
     position: relative;
     z-index: 2;
     background-color: grey;
-    width: 4%;
+    width: 3%;
     height: 14%;
     display: flex;
     justify-content: center;
@@ -558,7 +605,7 @@
 
 .button {
     width: 60%;
-    height: 10%;
+    height: 100px;
     text-align: center;
 }
 
@@ -575,9 +622,176 @@
     text-align: center;
 }
 
+#answers_questions {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(98.78deg, #041080 -2.69%, #0926C0 88.26%),
+    linear-gradient(95.22deg, #041080 -2.85%, #0926C0 93.37%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 70px 0 70px 0;
+
+}
+
+
+.answers_h1 {
+    font-family: "Roboto";
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 44.91px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+}
+
+.answers_rows {
+    height: auto;
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.answers_sum1 {
+    width: 80%;
+    height: 20%;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+    color: rgba(51, 51, 51, 1);
+    background: linear-gradient(180deg, #FFFFFF 50.57%, #BDC0FF 100%);
+    box-shadow: 0px 0px 50px -10px rgba(22, 126, 194, 0.2);
+    border-radius: 10px;
+    padding: 0 55px 0;
+    transition: 0.55s;
+}
+
+.sum_h1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 10px 20px 10px;
+    position: relative;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: rgba(51, 51, 51, 1);
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0px 0px 50px -10px rgba(22, 126, 194, 0.2);
+}
+
+
+summary {
+    display: block;
+}
+    summary::-webkit-details-marker {
+        display: none;
+    }
+
+    summary::before {
+        content: '﹀';
+        display: flex;
+        background: rgba(117, 122, 239, 1);
+        width: 3%;
+        height: 20%;
+        border-radius: 50%;
+        text-align: center;
+        flex-wrap: wrap;
+        padding: 18px 0 0 0;
+        font-size: 20px;
+        flex-direction: column;
+        justify-content: center;
+        color: #ffffff;
+    }
+
+    details[open] > summary::before { 
+        content: '︿';    background: rgba(255, 255, 255, 1);
+        color: rgba(117, 122, 239, 1);
+        padding: 0px 0 11px;
+        height: 29%;
+        border: 1px solid rgba(22, 126, 194, 1)
+    }
+
+.sum_1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 100%;
+}
+
+button:hover {
+    cursor: pointer;
+    background: rgba(150, 154, 247, 1);
+    color: black;
+}
 
 
 
+.answers_sum1:hover {
+    cursor: pointer;
+    background: orange;
+    color: #FFFFFF; 
+}
 
+.answers_sum1:active {
+    background-color: rgba(22, 126, 194, 1);
+}
+
+#footer_info {
+    width: 100%;
+    height: auto;
+    background: rgba(51, 51, 51, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.footer_main {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    margin: 50px 0 50px;
+    align-content: center;
+    gap: 59px;
+}
+
+.footer_but {
+    height: 50px;
+    width: 17%;
+    border-radius: 20px;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    background: rgba(150, 154, 247, 1);
+}
+
+.footer_but:hover {
+    cursor: pointer;
+    background: orange;
+    color: black;
+}
 
 
