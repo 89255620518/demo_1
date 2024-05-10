@@ -454,11 +454,11 @@
 }
 
 .slayd_img {
-    width: 60%;
+    width: 100%;
 }
 
 .slayd_img7 {
-    width: 40%;
+    width: 100%;
 }
 
 .my_icon {
@@ -479,6 +479,10 @@
 
 .my_icon:hover {
     background: #D2691E;
+}
+
+.my_icon:active {
+    background-color: #0926C0;
 }
 
 #working__schemes {
@@ -558,13 +562,6 @@
     clip-path: polygon(54% 15%, 100% -73%, 116% 7%, 100% 66%, 101% 99%, 9% 100%, 9% 79%, 0% 50%, 22% -45%);
 }
 
-/* .work_slides1 {
-    width: 25%;
-    height: 35%;
-    background: blue;
-    border-radius: 16%;
-    clip-path: polygon(0 0, 92% 0%, 93% 33%, 100% 50%, 93% 67%, 92% 100%, 0 100%, 0 50%);
-} */
 
 .slides_txt {
     width: 72%;
